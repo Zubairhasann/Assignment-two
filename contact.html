@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<!-- Navbar code -->
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a> 
+</div>
+
+<!-- Page content -->
+
+<h1>Contact Us</h1>
+
+<p>Information for Contacting us...</p>
+
+<img src="con2.jpg" alt="D:\Project\con1.jpg" width="380" height="280">
+
+<p>Contacting Number</p>
+<h5>Telephone: +880 1567 1423</h5>
+<h5>Fax: +880 9583 2942</h5>
+
+<img src="con2.jpg"alt="D:\Project\con2.jpg" width="380" height="280">
+
+<!-- Form -->
+
+<form id="contact-form">
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea><br>
+
+  <button type="submit">Submit</button>
+  
+</form>
+
+<div id="submitted"></div>
+
+<!-- JavaScript -->
+
+<script>
+
+// Get form and output div
+let form = document.getElementById('contact-form');
+let div = document.getElementById('submitted');
+
+// Add submit event to form  
+form.addEventListener('submit', function(event) {
+
+  // Prevent default form submit
+  event.preventDefault();
+  
+  // Get form data
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('message').value;
+  
+  // Display form data in div
+  div.innerHTML = "<p>Name: " + name + "</p><p>Email: " + email + "</p><p>Message: " + message + "</p>";
+
+});
+
+</script>
+
+</body>
+</html>
